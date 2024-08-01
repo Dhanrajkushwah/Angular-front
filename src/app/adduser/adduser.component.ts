@@ -27,7 +27,7 @@ export class AdduserComponent implements OnInit {
       discussionTopic: ['', Validators.required]
     },
   );
-  
+  this.getUsers();
   }
   
   
@@ -45,7 +45,9 @@ export class AdduserComponent implements OnInit {
         confirmButtonText: 'OK'
       });
       this.contactForm.reset();
+      this.getUsers();
       console.log(res)
+      
     })
    
   }
